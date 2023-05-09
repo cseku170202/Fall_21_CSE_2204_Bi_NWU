@@ -1,4 +1,4 @@
-#Bubble Sort Visualization
+<h1>Bubble Sort Visualization</h1>
 
 Project Member: Suchana Biswas Cheity, Limon Majumdar, Md. Nahid Hasan
 
