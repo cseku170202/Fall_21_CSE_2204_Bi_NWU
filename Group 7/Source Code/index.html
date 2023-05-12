@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bellman-Ford Visualization</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="input-section">
+			<h3>Input Section</h3>
+			<div class="input-boxes">
+				<!-- Source input box -->
+				<div class="input-box">
+					<label>Source</label>
+					<input type="text" id="source-input">
+				</div>
+				<!-- Vertices input box -->
+				<div class="input-box">
+					<label>Vertices</label>
+					<input type="text" id="vertices-input">
+				</div>
+				<!-- Edges input box -->
+				<div class="input-box">
+					<label>Edges</label>
+					<input type="text" id="edges-input">
+				</div>
+			</div>
+			<button id="run-button">Run Algorithm</button>
+		</div>
+		<div class="visualization-section">
+			<h3>Visualization Section</h3>
+			<div id="graph"></div>
+			<div id="result"></div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
