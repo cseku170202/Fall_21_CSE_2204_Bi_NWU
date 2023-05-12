@@ -1,0 +1,215 @@
+body {
+	background: linear-gradient(to right, #000000, #4f4f4f);
+	font-family: Arial, 'Times New Roman', Times, serif;
+	color: #140c0ca4;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.input-section {
+	flex-basis: 30%;
+	background-color: #ee3603;
+	padding: 20px;
+}
+
+.input-section h3 {
+	margin-top: 0;
+}
+
+.input-boxes {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.input-box {
+	flex-basis: calc(33.33% - 10px);
+	margin-right: 10px;
+}
+
+.input-box label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.input-box input {
+	width: 100%;
+	padding: 5px;
+	border-radius: 3px;
+	border: none;
+}
+
+#run-button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #f0f410ef;
+	border: none;
+	border-radius: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.visualization-section {
+	flex-basis: 60%;
+	background-color: #ff4907;
+	padding: 20px;
+	border: none;
+	margin-top: 5px;
+}
+
+.visualization-section h3 {
+	margin-top: 0;
+}
+
+#graph {
+	width: 100%;
+	height: 100%;
+	background-color: #09a4f2;
+	margin-bottom: 10px;
+	margin-top: auto;
+}
+
+#result {
+	padding: 10px;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+/* Animate the edges */
+path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 10s ease forwards;
+}
+
+@keyframes drawPath {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animate the arrowheads one by one */
+use {
+  animation: moveMarker 5s ease infinite;
+  display: none;
+}
+
+path:nth-child(1) use {
+  display: inline;
+  animation-delay: 0s;
+}
+
+path:nth-child(2) use {
+  display: none;
+}
+
+path:nth-child(3) use {
+  display: none;
+}
+
+path:nth-child(1) use {
+  display: inline;
+  animation-delay: 0s;
+}
+
+path:nth-child(2) use {
+  display: none;
+}
+
+path:nth-child(3) use {
+  display: none;
+}
+
+/* Animate the vertices one by one */
+circle {
+  animation: vertex 2s linear infinite;
+  display: none;
+}
+
+circle:nth-child(1) {
+  display: inline;
+  animation-delay: 0s;
+}
+
+circle:nth-child(2) {
+  display: none;
+}
+
+circle:nth-child(3) {
+  display: none;
+}
+
+circle:nth-child(1) {
+  display: inline;
+  animation-delay: 0s;
+}
+
+circle:nth-child(2) {
+  display: none;
+}
+
+circle:nth-child(3) {
+  display: none;
+}
+
+/* Connect edges and vertices step by step */
+path:nth-child(1):hover use:nth-child(2) {
+  display: inline;
+  animation-delay: 0s;
+}
+
+path:nth-child(2):hover use:nth-child(3) {
+  display: inline;
+  animation-delay: 0s;
+}
+
+/* Display the number of edges */
+text {
+  font-size: 30px;
+  font-weight: bold;
+  fill: rgb(245, 241, 241);
+  pointer-events: painted;
+  left: 150%;
+  right: 150%;
+  
+}
+
+
+path:nth-child(1) + text {
+  display: block;
+  transform: translate(60px,20px);
+}
+
+path:nth-child(2) + text {
+  display: flex;
+}
+
+path:nth-child(3) + text {
+  display: none;
+}
+
+/* Define the animations */
+@keyframes moveMarker {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes vertex {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
