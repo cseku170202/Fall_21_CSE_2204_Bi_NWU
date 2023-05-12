@@ -1,6 +1,6 @@
 # Bellman-Ford Algorithm Visualization
 
-# Project Member: Md.Abid Faisal, Md.Saad Islam Omy, Tawhid Islam Ebon
+# Project Member: Md.Abid Faisal, Tawhid Islam Ebon, Md.Saad Islam Omy
 
 # Project Member ID: 20212054010, 20212028010, 20212049010
 
